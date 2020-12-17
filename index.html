@@ -98,6 +98,8 @@
     </script>
     
 <style>
+@import url(https://victorlee.github.io/Mongolian_Universal_White/stylesheet.css);
+
 table {
   border-collapse: collapse;
   width: 70%;
@@ -109,7 +111,6 @@ td, th {
 }
 textarea {
 	font-size: 13pt;
-	font-family: Monospace;
     width: 96%;
 } 
 .note {
@@ -154,10 +155,10 @@ id="latin_textarea"
 autofocus=""
 placeholder="Latin text here"
 rows="15"
-oninput="onLatinTextChange(this.value)"></textarea>    
+oninput="onLatinTextChange(this.value)" style="font-family: 'Mongolian Universal White'"></textarea>    
 </td>
 <td>
-<textarea rows="15" placeholder="output" id="replaced_textarea"></textarea>    
+<textarea rows="15" placeholder="output" id="replaced_textarea" style="font-family: Monospace"></textarea>    
 </td>
 </tr>
 </tbody>
