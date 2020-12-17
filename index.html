@@ -29,7 +29,6 @@
         
      
         var latreplaced = {
-"᠊":"_",
 "᠎":"[V]",
 " ":"[N]",
 "ᠠ":"a",
@@ -41,11 +40,11 @@
 "ᠦ":"ü",
 "ᠧ":"ē",
 "ᠨ":"n",
-"ᠩ":"ŋ",
+"ᠩ":"ng",
 "ᠪ":"b",
 "ᠫ":"p",
-"ᠬ":"h",
-"ᠭ":"g",
+"ᠬ":"q",
+"ᠭ":"γ",
 "ᠮ":"m",
 "ᠯ":"l",
 "ᠰ":"s",
@@ -53,27 +52,20 @@
 "ᠲ":"t",
 "ᠳ":"d",
 "ᠴ":"č",
-"ᠵ":"j",
+"ᠵ":"ǰ",
 "ᠶ":"y",
 "ᠷ":"r",
-"ᠸ":"v",
+"ᠸ":"w",
 "ᠹ":"f",
-"ᠺ":"k'",
-"ᠻ":"k͡h",
-"ᠼ":"t͡s",
-"ᠽ":"d͡z",
-"ᠾ":"h'",
-"ᠿ":"r͡z",
-"ᡀ":"l͡h",
-"ᡁ":"z͡h",
-"ᡂ":"c͡h",
-"":"",
-"":"",
-"":"",
-"":"",
-"":"",
-"":"",
-
+"ᠺ":"g",
+"ᠻ":"k",
+"ᠼ":"c",
+"ᠽ":"z",
+"ᠾ":"h",
+"ᠿ":"ž",
+"ᡀ":"lh",
+"ᡁ":"zh",
+"ᡂ":"ch",
         };
 
         function onLatinTextChange(txt) {
@@ -152,7 +144,7 @@ textarea {
 <textarea
 id="latin_textarea"
 autofocus=""
-placeholder="Latin text here"
+placeholder="Mongolian here"
 rows="15"
 oninput="onLatinTextChange(this.value)" style="font-family: 'Mongolian Universal White'; font-size: 15pt;"></textarea>    
 </td>
@@ -162,7 +154,6 @@ oninput="onLatinTextChange(this.value)" style="font-family: 'Mongolian Universal
 </tr>
 </tbody>
 </table><br><div style="font-family:Monospace">
-	_: Mongolian Nirugu<br>
 	[V]: Mongolian Vowel Separator (MVS), U+180E<br>
 	[N]: Narrow No-Break Space (NNBSP), U+202F<br>
 	<a href="https://victorlee.github.io/Mongolian-script-unicode/">/Mongolian-script-unicode/</a><div>
