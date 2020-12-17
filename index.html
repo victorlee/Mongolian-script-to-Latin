@@ -29,8 +29,8 @@
         
      
         var latreplaced = {
-"᠎":"[MVS]",
-" ":"[NNBSP]",
+"᠎":"[M]",
+" ":"[N]",
 "ᠠ":"a",
 "ᠡ":"e",
 "ᠢ":"i",
@@ -108,7 +108,7 @@ td, th {
 }
 textarea {
 	font-size: 13pt;
-	font-family: Arial;
+	font-family: Monospace;
     width: 96%;
 } 
 .note {
@@ -152,16 +152,18 @@ textarea {
 id="latin_textarea"
 autofocus=""
 placeholder="Latin text here"
-rows="10"
+rows="15"
 oninput="onLatinTextChange(this.value)"></textarea>    
 </td>
 <td>
-<textarea rows="10" placeholder="output" id="replaced_textarea"></textarea>    
+<textarea rows="15" placeholder="output" id="replaced_textarea"></textarea>    
 </td>
 </tr>
 </tbody>
 </table><br>
-MVS: Mongolian Vowel Separator, U+180E<br>NNBSP: Narrow No-Break Space, U+202F<br><a href="https://victorlee.github.io/Mongolian-script-unicode/">/Mongolian-script-unicode/</a>
+	M: Mongolian Vowel Separator (MVS), U+180E<br>
+	N: Narrow No-Break Space (NNBSP), U+202F<br>
+	<a href="https://victorlee.github.io/Mongolian-script-unicode/">/Mongolian-script-unicode/</a>
 </center>
 </div>
 
