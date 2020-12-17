@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mongolian script to Latin</title>
+<meta charset="utf-8">
+
+    <script type="text/javascript">
+        function getReplacedText(latinText) {
+            if (!latinText) {
+                return "";
+        }
+            var replacedText = "";
+            for (var i = 0, len = latinText.length; i < len; i++) {
+                var curLetter = latinText[i];
+                var pos1Txt = latinText[i + 1];
+                var pos2Txt = latinText[i + 2];
+                if (!(curLetter == "")) {
+                    var dualLetter = latreplaced[curLetter + pos1Txt];
+                    if (dualLetter) {
+                        replacedText += dualLetter;
+                        i++;
+                        continue;
+                    }
+                }
+                replacedText += latreplaced[curLetter] || curLetter;
+            }
+            return replacedText;
+        }
+        
+     
+        var latreplaced = {
+"᠎":"[MVS]",
+" ":"[NNBSP]",
+"ᠠ":"a",
+"ᠡ":"e",
+"ᠢ":"i",
+"ᠣ":"o",
+"ᠤ":"u",
+"ᠥ":"ö",
+"ᠦ":"ü",
+"ᠧ":"ē",
+"ᠨ":"n",
+"ᠩ":"ŋ",
+"ᠪ":"b",
+"ᠫ":"p",
+"ᠬ":"h",
+"ᠭ":"g",
+"ᠮ":"m",
+"ᠯ":"l",
+"ᠰ":"s",
+"ᠱ":"š",
+"ᠲ":"t",
+"ᠳ":"d",
+"ᠴ":"č",
+"ᠵ":"j",
+"ᠶ":"y",
+"ᠷ":"r",
+"ᠸ":"v",
+"ᠹ":"f",
+"ᠺ":"k'",
+"ᠻ":"k͡h",
+"ᠼ":"t͡s",
+"ᠽ":"d͡z",
+"ᠾ":"h'",
+"ᠿ":"r͡z",
+"ᡀ":"l͡h",
+"ᡁ":"z͡h",
+"ᡂ":"c͡h",
+"":"",
+"":"",
+"":"",
+"":"",
+"":"",
+"":"",
+
+        };
+
+        function onLatinTextChange(txt) {
+            var replacedTextareaElem = document.getElementById("replaced_textarea");
+            var div = document.createElement("div");
+            var replacedHtmlEntities = getReplacedText(txt);
+            div.innerHTML = replacedHtmlEntities;
+            replacedTextareaElem.value = div.innerText;
+        }
+	    
+	function select() {
+         const input = document.getElementById('latin_textarea');
+ 	 input.focus();
+ 	 input.select();
+	}
+        function copytext() {
+        var copyText = document.getElementById("replaced_textarea");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        }
+    </script>
+    
+<style>
+table {
+  border-collapse: collapse;
+  width: 70%;
+}
+td, th {
+  border: 1px solid #AAA;
+  text-align: center;
+  padding: 2px;
+}
+textarea {
+	font-size: 13pt;
+	font-family: Arial;
+    width: 96%;
+} 
+.note {
+  border: 1px solid #DDD;
+  width: 45%;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+</style>
+
+
+</head>
+
+<body>  
+
+<center>
+<h1 class="text-center">Mongolian script to Latin</h1>	
+</center>
+
+<center>
+<table>
+<thead>
+<tr>
+<th>	
+<button onclick="select('latin_textarea')">Select all</button>
+<button onclick="document.getElementById('latin_textarea').value = ''">Clear</button>
+</th>
+<th>
+<button onclick="copytext()">Copy text</button>
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<textarea
+id="latin_textarea"
+autofocus=""
+placeholder="Latin text here"
+rows="10"
+oninput="onLatinTextChange(this.value)"></textarea>    
+</td>
+<td>
+<textarea rows="10" placeholder="output" id="replaced_textarea"></textarea>    
+</td>
+</tr>
+</tbody>
+</table><br>
+MVS: Mongolian Vowel Separator, U+180E<br>NNBSP: Narrow No-Break Space, U+202F
+</center>
+</div>
+
+</body>
+</html>
