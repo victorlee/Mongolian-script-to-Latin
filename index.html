@@ -38,7 +38,18 @@
 "\u180c":"²",
 "\u180d":"³",
 "\u180e":"_",
-"\u202f":"-",
+
+"᠐":"0",
+"᠑":"1",
+"᠒":"2",
+"᠓":"3",
+"᠔":"4",
+"᠕":"5",
+"᠖":"6",
+"᠗":"7",
+"᠘":"8",
+"᠙":"9",
+
 "ᠠ":"a",
 "ᠡ":"e",
 "ᠢ":"i",
@@ -74,16 +85,12 @@
 "ᡀ":"lh",
 "ᡁ":"zh",
 "ᡂ":"ch",
-"᠐":"0",
-"᠑":"1",
-"᠒":"2",
-"᠓":"3",
-"᠔":"4",
-"᠕":"5",
-"᠖":"6",
-"᠗":"7",
-"᠘":"8",
-"᠙":"9",
+
+"\u200c":"^ZWNJ",
+"\u200d":"*ZWJ",
+"\u202f":"-",
+"︕":"!",
+"︖":"?",
 "︽":"《",
 "︾":"》",
         };
@@ -165,8 +172,8 @@ textarea {
 id="latin_textarea"
 autofocus=""
 placeholder="Mongolian here"
-rows="18"
-oninput="onLatinTextChange(this.value)" style="font-family: 'Mongolian White'; font-size: 15pt;"></textarea>    
+rows="15"
+oninput="onLatinTextChange(this.value)" style="font-family: 'Mongolian White'; font-size: 13pt;"></textarea>    
 </td>
 <td>
 <textarea rows="17" placeholder="output" id="replaced_textarea" style="font-family: Monospace; font-size: 13pt;" spellcheck="false"></textarea>    
@@ -179,6 +186,8 @@ oninput="onLatinTextChange(this.value)" style="font-family: 'Mongolian White'; f
 	²: Mongolian Free Variation Selector Two (FVS2), U+180C<br>
 	³: Mongolian Free Variation Selector Three (FVS3), U+180D<br>
 	_: Mongolian Vowel Separator (MVS), U+180E<br>
+	^: Zero Width Non-Joiner (ZWNJ),  U+202C<br>
+	*: Zero Width Joiner (ZWJ),  U+202D<br>
 	-: Narrow No-Break Space (NNBSP), U+202F<br>
 	<a href="https://victorlee.github.io/Mongolian-script-unicode/">/Mongolian-script-unicode/</a><div>
 </center>
